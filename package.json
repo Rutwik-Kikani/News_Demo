@@ -3,7 +3,7 @@
   "description": "News App",
   "scripts": {
     "start": "run-p start:dev",
-    "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
+    "start:dev": "webpack-dev-server --open --config webpack.config.dev.js --port 3000",
     "test": "jest --watch",
     "test:ci": "jest",
     "clean:build": "rimraf ./build && mkdir build",
@@ -24,10 +24,13 @@
   "dependencies": {
     "bootstrap": "4.3.1",
     "immer": "2.1.3",
+    "owl.carousel": "^2.3.4",
     "prop-types": "15.7.2",
     "react": "16.8.4",
     "react-dom": "16.8.4",
+    "react-owl-carousel": "^2.3.3",
     "react-redux": "6.0.1",
+    "react-responsive-carousel": "^3.2.13",
     "react-router-dom": "5.0.0",
     "react-toastify": "4.5.2",
     "redux": "4.0.1",
