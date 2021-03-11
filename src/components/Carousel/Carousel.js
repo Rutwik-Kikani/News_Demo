@@ -4,7 +4,7 @@ import React from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import "../../assets/style.css";
+import "./style.css";
 
 export default function Carousel() {
   return (
@@ -21,7 +21,9 @@ export default function Carousel() {
               allowFullScreen
             ></iframe>
           </div>
-
+          {/* function change(e) {
+              e.target.setAttribute( 'src', 'https://www.youtube.com/embed/ujPNSC4JllE');
+          } */}
           <OwlCarousel
             items={5}
             className="owl-carousel owl-theme play-list"
@@ -34,6 +36,7 @@ export default function Carousel() {
                 className="card-img link-img"
                 src={"src/assets/images/play1.png"}
                 alt=""
+                // onClick={change}
                 data-link="https://www.youtube.com/embed/ujPNSC4JllE"
               />
             </div>
