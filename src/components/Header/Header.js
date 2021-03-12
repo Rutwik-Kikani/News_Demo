@@ -2,11 +2,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
-import { NavLink } from "react-router-dom";
-
 import "./Header.css";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header className="mt-0 pt-0">
       <div className="bg-cover clearfix pt-3">
@@ -47,6 +45,13 @@ const Header = (props) => {
           </li>
         </nav>
       </div>
+
+      <input
+        type="text"
+        id="nav-search"
+        className="nav-search mx-auto form-control"
+        name=""
+      ></input>
     </header>
   );
 };
