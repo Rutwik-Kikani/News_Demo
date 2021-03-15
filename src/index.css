@@ -121,6 +121,9 @@ h6 {
   border: none;
   border-radius: 0;
 }
+.app {
+  background-color: black;
+}
 
 .card img {
   border-radius: 0;
