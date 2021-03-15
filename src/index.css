@@ -83,8 +83,9 @@ video {
   padding: 0;
 }
 @font-face {
+
   font-family: "Angeline_Vintage";
-  src: url(../src/assets/fonts/Angeline_Vintage.ttf);
+  src: url(./assets/fonts/Angeline_Vintage.ttf);
 }
 @font-face {
   font-family: "Montserrat-Bold";
