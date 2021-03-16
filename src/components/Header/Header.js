@@ -5,6 +5,10 @@ import React from "react";
 import "./Header.css";
 
 const Header = () => {
+  function myFunction(HtmlElement) {
+    console.log(HtmlElement);
+    return "something";
+  }
   return (
     <header className="mt-0 pt-0">
       <div className="bg-cover clearfix pt-3">
@@ -52,6 +56,46 @@ const Header = () => {
         className="nav-search mx-auto form-control"
         name=""
       ></input>
+
+      <div className="ml-0 mr-0 pb-1">
+        <nav className="navbar navbar-expand-md">
+          <button
+            className="navbar-toggler ml-auto"
+            data-target="#my-nav"
+            data-toggle="collapse"
+            aria-controls="my-nav"
+            aria-expanded="false"
+            onClick={() => myFunction(this)}
+            aria-label="Toggle navigation"
+          ></button>
+          <span className="bar1"></span> <span className="bar2"></span>{" "}
+          <span className="bar3"></span>
+          <div id="my-nav" className="collapse navbar-collapse">
+            <ul className="navbar-nav mx-auto">
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
+                  google
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
+                  GENERAL
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
+                  GENERAL
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
+                  GENERAL
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 };
