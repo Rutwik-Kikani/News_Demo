@@ -1,14 +1,14 @@
-import { handleResponse, handleError } from "./apiUtils";
-const baseUrl = "https://newsapi.org/v2/";
+// import { handleResponse, handleError } from "./apiUtils";
+// const baseUrl = "https://newsapi.org/v2/";
 
 export const myRequestHeaders = new Headers();
 myRequestHeaders.append("X-Api-Key", "d0df641083064873a66781d4cf7a9147");
 myRequestHeaders.append("Content-Type", "application/json; charset=utf-8");
 
 export const categories = {
+  GENERAL: "general",
   BUSINESS: "business",
   ENTERTAINMENT: "entertainment",
-  GENERAL: "general",
   HEALTH: "health",
   SCIENCE: "science",
   SPORTS: "sports",
