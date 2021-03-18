@@ -7,7 +7,7 @@ export default function Gallery() {
       <div className="col-md-12 mb-8">
         <div className="row">
           <div className="col-md-12 col-lg-7 pr-0 pd-md">
-            <img src={"src/assets/images/gallery-img1.png"} alt="" />
+            <img src="src/assets/images/gallery-img1.png" alt="" />
           </div>
           <div className="col-md-12 col-lg-5 light-bg cus-pd cus-arrow-left">
             <p>
@@ -26,7 +26,13 @@ export default function Gallery() {
               find fault with a man who chooses To take a trivial example, which
               of us ever undertakes laborious physical exercise, except to
               obtain some advantage from it? But who has any right to find fault
-              with a man who chooses...
+              with a man who chooses...To take a trivial example, which of us
+              ever undertakes laborious physical exercise, some advantage from
+              it? fault with a man who chooses...To take a trivial example,
+              which of us ever undertakes laborious physical exercise, some
+              advantage from it? fault with a man who chooses...To take a
+              trivial example, which of us ever undertakes laborious physical
+              exercise, some advantage from it? fault with a man who chooses...
             </p>
           </div>
         </div>
@@ -40,7 +46,7 @@ export default function Gallery() {
         <div className="card">
           <img
             className="card-img h-100"
-            src={"src/assets/images/gallery-img2.jpg"}
+            src="src/assets/images/gallery-img2.jpg"
             alt=""
           />
           <div className="card-img-overlay">
@@ -67,12 +73,12 @@ export default function Gallery() {
         <div className="card">
           <img
             className="card-img-top"
-            src={"src/assets/images/gallery-img3.jpg"}
+            src="src/assets/images/gallery-img3.jpg"
             alt=""
           />
           <div className="card-body bg-gray cus-pd2 cus-arrow-up">
             <p>
-              <small>{Date}</small>
+              <small>march 27, 2020</small>
             </p>
             <h3>Trendy Summer Fashion</h3>
             <p>
