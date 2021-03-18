@@ -1,14 +1,15 @@
 import React from "react";
-// import { Route, Switch } from "react-router-dom";
-import Header from "./Header/Header";
-import Carousel from "./Carousel/Carousel";
+
+// import component
+import Header from "./components/Header/Header";
 import Gallery from "./Gallery/Gallery";
+//import style
+import "./App.js";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Header />
-      <Carousel />
       <Gallery />
     </div>
   );
