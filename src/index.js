@@ -1,11 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Provider as ReduxProvider } from "react-redux";
+// import { BrowserRouter as Router } from "react-router-dom";
+// import { Provider as ReduxProvider } from "react-redux";
 
 //imoprt styles
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap";
 import "./index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 //components import
 // import configureStore from "./redux/configureStore";

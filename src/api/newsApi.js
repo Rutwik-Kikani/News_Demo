@@ -6,9 +6,9 @@ myRequestHeaders.append("X-Api-Key", "d0df641083064873a66781d4cf7a9147");
 myRequestHeaders.append("Content-Type", "application/json; charset=utf-8");
 
 export const categories = {
+  GENERAL: "general",
   BUSINESS: "business",
   ENTERTAINMENT: "entertainment",
-  GENERAL: "general",
   HEALTH: "health",
   SCIENCE: "science",
   SPORTS: "sports",

@@ -1,0 +1,89 @@
+
+/* ------------------------------------------------- */
+.display-template .card{
+    color:#ffffff;
+    text-align: center;
+}
+
+.display-template .card p{
+    text-transform: uppercase;
+}
+
+
+.display-template .card hr{
+  margin-top: 5px;
+  width: 100%;
+  border: 1px solid #03133a;
+}
+
+.display-template .card h2{
+  font-size: 40px;
+  max-width: 510px;
+  margin: 20px auto;
+}
+
+@media (max-width: 1299px){
+    .display-template .card h2{
+        font-size: 24px
+    }
+
+    .display-template .card a{
+        width: auto;
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+}
+
+  @media (max-width: 767px) {
+    .display-template .card h2 {
+      font-size: 36px;
+    }
+    .display-template .card a {
+      width: auto;
+      padding: 12px 15px;
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 500px) {
+    .display-template .card h2 {
+      font-size: 24px;
+    }
+    .display-template .card a {
+      width: auto;
+      padding: 8px 15px;
+      font-size: 14px;
+    }
+  }
+ /* --------------------------------------------------- */
+.display-template .col-md-3{
+    text-align: center;
+    padding: 5px 5px;
+}
+
+.display-template .col-md-3 img{
+    max-height: 256px;
+}
+.display-template .col-md-3 h5 {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---------------------------------------------------- */
+.display-template .card a{
+  background-color: #03133a;
+  width: 200px;
+  padding: 12px 0;
+  color: #ffffff;
+  font-family: "Montserrat-Bold";
+  margin-top: 20px;
+  border-radius: 0;
+  align-self: center;
+  
+}
+
+.display-template .card a:hover{
+    background: #ffffff;
+    color: #03133a;
+}
