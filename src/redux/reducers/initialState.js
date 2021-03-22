@@ -1,3 +1,5 @@
 export default {
-  apiCallsInProgress: 0,
+  currentPage: 1,
+  resultNewsArray: [],
+  loading: false,
 };

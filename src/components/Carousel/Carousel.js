@@ -7,16 +7,16 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./style.css";
 
 export default function Carousel() {
-  function change() {
-    document.addEventListener(
-      "click",
-      function (event) {
-        var video = event.target.getAttribute("src", "data-link");
-        if (!video) return;
-      },
-      false
-    );
-  }
+  // function change() {
+  //   document.addEventListener(
+  //     "click",
+  //     function (event) {
+  //       var video = event.target.getAttribute("src", "data-link");
+  //       if (!video) return;
+  //     },
+  //     false
+  //   );
+  // }
   // function change(e) {
   //   e.target.setAttribute( 'src', 'https://www.youtube.com/embed/ujPNSC4JllE');
   // }

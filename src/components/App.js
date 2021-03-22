@@ -6,11 +6,13 @@ import Gallery from "./Gallery/Gallery";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Carousel />
-      <Gallery />
-    </div>
+    <>
+      <div>
+        <Header />
+        <Carousel />
+        <Gallery />
+      </div>
+    </>
   );
 }
 

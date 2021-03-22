@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import apiCallsInProgress from "./apiStatusReducer";
+import newsReducer from "./newsReducer";
 
 const rootReducer = combineReducers({
-  apiCallsInProgress,
+  newsReducer,
 });
 
 export default rootReducer;

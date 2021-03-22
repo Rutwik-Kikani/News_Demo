@@ -40,7 +40,7 @@ function SmallCard({ Image, Heading }) {
 //--------------------------------------------------------
 // Main DisplayTemplate
 //--------------------------------------------------------
-const DisplayTemplate = (props) => {
+const DisplayTemplate = () => {
   return (
     <section className="display-template">
       <div className="row ml-0 mr-0 no-gutters">
