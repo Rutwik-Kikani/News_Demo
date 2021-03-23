@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 // import { BrowserRouter as Router } from "react-router-dom";
-// import { Provider as ReduxProvider } from "react-redux";
+import { Provider as ReduxProvider } from "react-redux";
 
 //imoprt styles
 import "bootstrap/dist/css/bootstrap.css";
@@ -9,16 +9,16 @@ import "bootstrap/dist/js/bootstrap";
 import "./index.css";
 
 //components import
-// import configureStore from "./redux/configureStore";
+import configureStore from "./redux/configureStore";
 import App from "./components/App";
 
-// const store = configureStore();
+const store = configureStore();
 
 render(
-  // <ReduxProvider store={store}>
-  // <Router>
-  <App />,
-  // </Router>
-  // </ReduxProvider>
+  <ReduxProvider store={store}>
+    {/* </ReduxProvider><Router> */}
+    <App />
+    {/* </Router> */}
+  </ReduxProvider>,
   document.getElementById("app")
 );

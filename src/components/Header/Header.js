@@ -2,7 +2,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable jsx-a11y/anchor-has-content */
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import * as newsActions from "../../redux/actions/newsActions";
 import _ from "lodash";
 
 //import components
@@ -29,7 +32,7 @@ let defaultCategory = categories.GENERAL;
 let togglerStyle = "navbar-toggler ml-auto";
 
 // -----------------------------------------------------------------------------
-//Parchuran small-small component
+//Parchuran small-small component and helper functions
 // -----------------------------------------------------------------------------
 function SocialLinkTemplate({ socialLink, socialIcon }) {
   return (
@@ -74,13 +77,19 @@ const sendQuery = (query) => console.log(`Querying for ${query}`);
 //main header component
 // -----------------------------------------------------------------------------
 
-const Header = (props) => {
+const Header = ({ news, page, loading, actions }) => {
   const [a_category, setACategory] = useState(defaultCategory);
   const [userQuery, setUserQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    actions
+      .loadNews("general", 1)
+      .catch((error) => alert("this is a error:", error));
+  }, []);
+
   const delayedQuery = useCallback(
-    _.debounce((q) => sendQuery(q), 1000),
+    () => _.debounce((q) => sendQuery(q), 1000),
     []
   );
 
@@ -90,10 +99,10 @@ const Header = (props) => {
     delayedQuery(event.target.value);
   };
 
-  const togglerHandle = (event) => {
+  const togglerHandle = () => {
     setIsOpen((prevState) => {
       return !prevState;
-    })
+    });
   };
 
   const changeActiveCategory = (c_category) => {
@@ -162,4 +171,26 @@ const Header = (props) => {
     </header>
   );
 };
-export default Header;
+
+function mapStateToProps(state) {
+  debugger;
+  return {
+    news: state.resultNewsArray,
+    page: state.pageNo,
+    loading: state.loading,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      loadNews: bindActionCreators(
+        (categoryName, pageNo) =>
+          newsActions.loadNewsByCategoryPageNo(categoryName, pageNo),
+        dispatch
+      ),
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
