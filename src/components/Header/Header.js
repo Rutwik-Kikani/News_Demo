@@ -84,9 +84,9 @@ const Header = ({ news, page, loading, actions }) => {
 
   useEffect(() => {
     actions
-      .loadNews("general", 1)
+      .loadNews(a_category.toLowerCase(), 1)
       .catch((error) => alert("this is a error:", error));
-  }, []);
+  }, [a_category]);
 
   const delayedQuery = useCallback(
     () => _.debounce((q) => sendQuery(q), 1000),
@@ -129,7 +129,7 @@ const Header = ({ news, page, loading, actions }) => {
           type="text"
           id="nav-search"
           name="nav-search"
-          className="mx-auto form-control nav-search"
+          className={!isOpen ? togglerStyle + " change" : togglerStyle}
           onChange={inputSearchChangeHandle}
           value={userQuery}
         />
@@ -173,9 +173,8 @@ const Header = ({ news, page, loading, actions }) => {
 };
 
 function mapStateToProps(state) {
-  debugger;
   return {
-    news: state.resultNewsArray,
+    news: state.resultNewsArray || [],
     page: state.pageNo,
     loading: state.loading,
   };
