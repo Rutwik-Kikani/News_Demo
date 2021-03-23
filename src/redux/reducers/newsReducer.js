@@ -8,9 +8,8 @@ export default function newsReducer(
   switch (action.type) {
     case actionTypes.LOAD_NEWS_BY_CATEGORY_AND_PAGE_SUCCESS: {
       //copy the payload news and set it in stat{}
-      console.log("newsreducer.js > ", action);
       const cpNews = { ...action.payload.news };
-      return [...state, ...cpNews.articles];
+      return [...cpNews.articles];
     }
     default:
       return state;

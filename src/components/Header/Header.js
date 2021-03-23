@@ -177,6 +177,7 @@ const Header = ({ news, page, loading, actions }) => {
 };
 
 function mapStateToProps(state) {
+  debugger;
   return {
     news: state.resultNewsArray,
     page: state.pageNo,
