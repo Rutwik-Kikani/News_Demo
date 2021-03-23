@@ -93,10 +93,7 @@ const Header = (props) => {
   const togglerHandle = (event) => {
     setIsOpen((prevState) => {
       return !prevState;
-    });
-    if (!isOpen) {
-      togglerStyle = "navbar-toggler ml-auto change";
-    }
+    })
   };
 
   const changeActiveCategory = (c_category) => {
@@ -132,7 +129,7 @@ const Header = (props) => {
           <nav className="navbar navbar-expand-md">
             <button
               type="button"
-              className={togglerStyle}
+              className={isOpen ? togglerStyle + " change" : togglerStyle}
               data-target="#my-nav"
               data-toggle="collapse"
               aria-controls="#my-nav"

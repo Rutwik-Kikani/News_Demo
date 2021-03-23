@@ -2,8 +2,8 @@
   "name": "ps-redux",
   "description": "News App",
   "scripts": {
-    "start": "run-p start:dev",
-    "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
+    "start:dev": "run-p start:dev",
+    "start": "webpack-dev-server --config webpack.config.dev.js --port 3000",
     "test": "jest --watch",
     "test:ci": "jest",
     "clean:build": "rimraf ./build && mkdir build",
