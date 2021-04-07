@@ -152,7 +152,6 @@ const Header = ({ news, page, loading, actions }) => {
             </button>
 
             <div id="my-nav" className="collapse navbar-collapse">
-              hello
               {_.map(categories, (category, index) => {
                 return (
                   <CategoryLinkTemplate
